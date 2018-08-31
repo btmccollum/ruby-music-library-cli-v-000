@@ -59,7 +59,7 @@ class MusicLibraryController
       end
     end
     list_of_songs.sort_by! {|song| song.name}
-    list_of_songs.each_with_index {|song, index| "#{index + 1}. #{song.name} - #{song.genre.name}"}
+    list_of_songs.each_with_index {|song, index| puts "#{index + 1}. #{song.name} - #{song.genre.name}"}
   end
 
   def list_songs_by_genre
@@ -72,17 +72,27 @@ class MusicLibraryController
       end
     end
     list_of_genres.sort_by! {|song_listing| song_listing.name}
-    list_of_genres.each_with_index {|song, index| "#{index + 1}. #{song.artist.name} - #{song.name}"}
+    list_of_genres.each_with_index {|song, index| puts "#{index + 1}. #{song.artist.name} - #{song.name}"}
   end
 
   def play_song
     # self.list_songs
+    # binding.pry
     puts "Which song number would you like to play?"
     input = gets.strip
-    # binding.pry
-    song = self.list_songs[input.to_i - 1]
-    # binding.pry
-    "Playing #{song.name} by #{song.artist.name}"
+    # # binding.pry
+    # a = self.list_songs[input.to_i - 1].name
+    # b = self.list_songs[input.to_i - 1].artist.name
+    # # binding.pry
+    "Playing #{a} by #{b}."
+
+    if gets > self.list_songs.size
+      play_song
+    else
+      a = self.list_songs[input.to_i - 1].name
+      b = self.list_songs[input.to_i - 1].artist.name
+      "Playing #{a} by #{b}."
+    end
   #  song = self.list_songs.select {|x| x == input}
   end
 end
