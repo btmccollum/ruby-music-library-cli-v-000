@@ -81,7 +81,7 @@ class MusicLibraryController
   def play_song
     new_array = []
     self.list_songs.each{|x| new_array << x}
-    # binding.pry
+    binding.pry
     puts "Which song number would you like to play?"
     input = gets.strip.to_i
     # binding.pry
