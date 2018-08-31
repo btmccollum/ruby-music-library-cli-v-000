@@ -34,7 +34,7 @@ class MusicLibraryController
     #     puts "#{index + 1}. #{song_in_list.artist.name} - #{song_in_list.name} - #{song_in_list.genre.name}"
     # end
     returnlist = []
-    songlist.each_with_index {|song, index| returnlist << #{index + 1}. #{song_in_list.artist.name} - #{song_in_list.name} - #{song_in_list.genre.name}}
+    songlist.each_with_index {|song, index| returnlist << "=#{index + 1}. #{song_in_list.artist.name} - #{song_in_list.name} - #{song_in_list.genre.name}"}
     returnlist
   end
 
