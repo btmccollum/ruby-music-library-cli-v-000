@@ -80,7 +80,7 @@ class MusicLibraryController
     # binding.pry
     puts "Which song number would you like to play?"
     input = gets.strip
-    # # binding.pry
+    binding.pry
     # a = self.list_songs[input.to_i - 1].name
     # b = self.list_songs[input.to_i - 1].artist.name
     # # binding.pry
