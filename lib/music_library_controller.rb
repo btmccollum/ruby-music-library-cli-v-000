@@ -29,7 +29,7 @@ class MusicLibraryController
   end
 
   def list_songs
-    binding.pry
+    # binding.pry
     songlist = []
     Song.all.each {|song_in_list| songlist << song_in_list}
     songlist.sort_by! {|song_in_list| song_in_list.name}
