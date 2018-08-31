@@ -30,9 +30,12 @@ class MusicLibraryController
     songlist = []
     Song.all.each {|song_in_list| songlist << song_in_list}
     songlist.sort_by! {|song_in_list| song_in_list.name}
-    songlist.each_with_index do |song_in_list, index|
-        puts "#{index + 1}. #{song_in_list.artist.name} - #{song_in_list.name} - #{song_in_list.genre.name}"
-    end
+    # songlist.each_with_index do |song_in_list, index|
+    #     puts "#{index + 1}. #{song_in_list.artist.name} - #{song_in_list.name} - #{song_in_list.genre.name}"
+    # end
+    returnlist = []
+    songlist.each_with_index {|song, index| returnlist << #{index + 1}. #{song_in_list.artist.name} - #{song_in_list.name} - #{song_in_list.genre.name}}
+    returnlist
   end
 
   def list_artists
