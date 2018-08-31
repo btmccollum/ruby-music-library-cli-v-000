@@ -94,7 +94,8 @@ class MusicLibraryController
     else
       # a = self.list_songs[input - 1].name
       # b = self.list_songs[input - 1].artist.name
-      "Playing #{self.list_songs[input - 1].name} by #{self.list_songs[input - 1].artist.name}."
+      # "Playing #{self.list_songs[input - 1].name} by #{self.list_songs[input - 1].artist.name}."
+      "Playing #{new_array[input - 1].name} by #{new_array[input - 1].artist.name}."
     end
   #  song = self.list_songs.select {|x| x == input}
   end
