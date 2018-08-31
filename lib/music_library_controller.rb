@@ -88,9 +88,9 @@ class MusicLibraryController
     if input > self.list_songs.size
       play_song
     else
-      a = self.list_songs[input - 1].name
-      b = self.list_songs[input - 1].artist.name
-      "Playing #{a} by #{b}."
+      # a = self.list_songs[input - 1].name
+      # b = self.list_songs[input - 1].artist.name
+      "Playing #{self.list_songs[input - 1].name} by #{self.list_songs[input - 1].artist.name}."
     end
   #  song = self.list_songs.select {|x| x == input}
   end
