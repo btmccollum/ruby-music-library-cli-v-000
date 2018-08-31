@@ -84,7 +84,7 @@ class MusicLibraryController
     # a = self.list_songs[input.to_i - 1].name
     # b = self.list_songs[input.to_i - 1].artist.name
     # # binding.pry
-    "Playing #{a} by #{b}."
+    # "Playing #{a} by #{b}."
 
     if gets > self.list_songs.size
       play_song
