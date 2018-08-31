@@ -30,12 +30,13 @@ class MusicLibraryController
 
   def list_songs
     # binding.pry
-    songlist = []
-    Song.all.each {|song_in_list| songlist << song_in_list}
-    songlist.sort_by! {|song_in_list| song_in_list.name}
-    songlist.map.with_index do |song_in_list, index|
-        puts "#{index + 1}. #{song_in_list.artist.name} - #{song_in_list.name} - #{song_in_list.genre.name}"
-    end
+    # songlist = []
+    # Song.all.each {|song_in_list| songlist << song_in_list}
+    # songlist.sort_by! {|song_in_list| song_in_list.name}
+    # songlist.map.with_index do |song_in_list, index|
+    #     puts "#{index + 1}. #{song_in_list.artist.name} - #{song_in_list.name} - #{song_in_list.genre.name}"
+    # end
+    Song.all.sort_by {|song| song.name}.each_with_index {|a, b| puts "#{b + 1}. #{a.artist.name} - #{a.name} - #{a.genre.name}" }
   end
 
   def list_artists
