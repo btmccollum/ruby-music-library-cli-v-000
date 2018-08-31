@@ -7,6 +7,7 @@ class MusicLibraryController
     @path = path
     controller = MusicImporter.new(path)
     controller.import
+    controller
   end
 
   def call
